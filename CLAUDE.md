@@ -24,3 +24,7 @@ Dependency chain: `index.html` → `src/main.js` → `src/App.vue` → `src/comp
 - Particle state (`particles`, `bursts`, mouse position) intentionally lives in plain module-level variables inside ParticleCanvas, NOT in Vue reactive refs — reactivity per animation frame would be a performance problem. Keep it that way when modifying the engine.
 - The foreground `.overlay` in App.vue uses `pointer-events: none` so mouse events pass through to the canvas (particle interaction: mouse attracts particles, click triggers a burst). Interactive elements like buttons must individually restore `pointer-events: auto`.
 - The engine cleans up in `onBeforeUnmount` (cancels rAF, removes listeners); any new listeners or timers added to ParticleCanvas must be cleaned up there too.
+
+
+
+修改成功
